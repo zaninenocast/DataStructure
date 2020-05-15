@@ -33,6 +33,13 @@ class Array{
     	 count--;
     	  
       }
+     public int indexOf(int item) {
+    	 for (int i = 0; i< count ; i++)
+    		 if (items[i] == item) {
+    			return i;
+    		 }
+    	return -1;
+     }
 }
 public class Example3 {
 
@@ -49,8 +56,10 @@ public class Example3 {
 		number.removeAt(1);
 		number.print();
 		System.out.println("***************");
-		number.removeAt(2);
+		number.removeAt(1);
 		number.print();
+		System.out.println("Index of item 50 :"+ number.indexOf(50));
+		System.out.println("Index of item 30:"+ number.indexOf(30));
 
 	}
 
